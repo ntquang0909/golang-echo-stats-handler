@@ -16,7 +16,7 @@ var nsInMs float64 = float64(time.Millisecond)
 
 var statsMux sync.Mutex
 
-func statsHandler(c echo.Context) error {
+func Handler(c echo.Context) error {
 	statsMux.Lock()
 	defer statsMux.Unlock()
 
